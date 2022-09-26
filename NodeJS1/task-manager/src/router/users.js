@@ -36,6 +36,7 @@ router.get('/users/:id', (req, res) => {
             return res.status(401).send("User Not Found");
         }
         res.send(user)
+        console.log(user)
     }).catch(() => {
         res.status(501).send(error)
     })
