@@ -57,11 +57,11 @@ router.patch('/users/:id', async(req, res) => {
             runValidators: true
         });
         if (!user) {
-            return res.status(404).send();
+            return res.status(200).send();
         }
         res.send(user);
     } catch (e) {
-        res.status(400).send(e);
+        res.status(202).send(e);
     }
 })
 
